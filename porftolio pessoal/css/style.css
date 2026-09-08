@@ -1,0 +1,61 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+}
+
+header{
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  
+}
+
+nav {
+    display: flex;
+    gap: 300px;
+    height: 80px;
+}
+
+.menu {
+    align-items: center;     
+    justify-content: center;
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: black;
+  font-size: 35px;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+
+nav img {
+    margin-top: 15px;
+    width: 80px;
+    height: 50px;
+    margin-left: 50px;
+}
+
+section {
+    min-height: 100vh;
+    padding: 100px 40px 40px;
+    box-sizing: border-box;
+    scroll-margin-top: 70px;
+}
+
+#inicio {
+  background: linear-gradient(120deg, #fafafa 0%, #eeeeee 50%, #dcdcdc 100%);
+
+}
+
+
+
