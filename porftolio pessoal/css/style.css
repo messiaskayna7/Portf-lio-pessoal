@@ -198,14 +198,6 @@ nav .logo {
   gap: 24px;
 }
 
-.img-inicio img {
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #ccc;
-}
-
 .sobre {
   display: flex;
   flex-direction: column;
@@ -234,14 +226,6 @@ nav .logo {
   font-size: 17px;
   line-height: 1.5;
   color: #333;
-}
-
-.img-sobre img {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #ccc;
 }
 
 .ferramentas-tab h2 {
@@ -401,14 +385,6 @@ nav .logo {
   width: 20px;
   height: 20px;
   filter: invert(1);
-}
-
-.img-contato img {
-  width: 380px;
-  height: 380px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #333;
 }
 
 @media (max-width: 900px) {
