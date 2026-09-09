@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0;
-    background-color: white;
+    background: linear-gradient(120deg, #fafafa 0%, #eeeeee 50%, #dcdcdc 100%);
 }
 
 header{
@@ -53,7 +53,56 @@ section {
 }
 
 #inicio {
-  background: linear-gradient(120deg, #fafafa 0%, #eeeeee 50%, #dcdcdc 100%);
+.inicio {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.info-inicio {
+    margin: 20px;
+    margin-left: 50px;
+    display: flex;
+}
+
+.texto-inicio {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 400px;
+    width: 600px;
+}
+
+.text1-info{
+    
+    font-size: 100px;
+    margin-bottom: 0;
+}
+
+.linha {
+    font-size: 56px;
+    width: 100%;
+    margin-top: 0;
+    line-height: 0;
+}
+
+.text-info {
+    color: #B8B8B8;
+}
+
+.texto-inicio p {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.img-inicio {
+    margin-left: 400px;
+}
+
+.botoes1 {
+   display: flex;
+}
 
 }
 
