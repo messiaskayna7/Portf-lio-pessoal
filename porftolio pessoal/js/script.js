@@ -1,10 +1,20 @@
-async function carregarSecao(id, arquivo) {
-  const resposta = await fetch(arquivo);
-  const html = await resposta.text();
-  document.getElementById(id).innerHTML = html;
-}
+// Destaca o link do menu correspondente à seção visível na tela
+const secoes = document.querySelectorAll("section");
+const links = document.querySelectorAll(".menu a");
 
-carregarSecao("inicio", "inicio.html");
-carregarSecao("sobre", "sobre.html");
-carregarSecao("projetos", "projetos.html");
-carregarSecao("contato", "contatos.html");
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        links.forEach((link) => link.classList.remove("active"));
+        const linkAtivo = document.querySelector(
+          `.menu a[href="#${entry.target.id}"]`,
+        );
+        if (linkAtivo) linkAtivo.classList.add("active");
+      }
+    });
+  },
+  { threshold: 0.5 },
+);
+
+secoes.forEach((secao) => observer.observe(secao));
