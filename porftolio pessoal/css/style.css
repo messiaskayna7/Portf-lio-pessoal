@@ -85,7 +85,7 @@ nav .logo {
 .page-indicator {
   position: absolute;
   left: 60px;
-  bottom: 40px;
+  bottom: 20px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -198,17 +198,19 @@ nav .logo {
   gap: 24px;
 }
 
+
+
 .sobre {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
 }
 
 .info-sobre {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
+  gap: px;
 }
 
 .texto-sobre {
@@ -228,6 +230,8 @@ nav .logo {
   color: #333;
 }
 
+
+
 .ferramentas-tab h2 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 32px;
@@ -235,13 +239,17 @@ nav .logo {
 }
 
 .ferramentas {
+    background: linear-gradient(135deg, #f5f5f5 0%, #757575 60%, #050505 100%);
   display: flex;
+  padding: 20px 20px 20px 20px;
   gap: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px black;
 }
 
 .ferramenta-item {
-  width: 120px;
-  height: 120px;
+  width: 230px;
+  height: 230px;
   border-radius: 12px;
   background: linear-gradient(135deg, #1a1a1a, #4a4a4a);
   display: flex;
@@ -250,9 +258,17 @@ nav .logo {
 }
 
 .ferramenta-item img {
-  width: 60px;
-  height: 60px;
+  width: 180px;
+  height: 200px;
   object-fit: contain;
+}
+
+.text2-info{
+   font-family: "Bebas Neue", sans-serif;
+}
+.titulo-projetos {
+  margin-bottom: 40px;
+  font-size: 60px;
 }
 
 .projetos-tab {
@@ -260,6 +276,7 @@ nav .logo {
   gap: 30px;
   flex-wrap: wrap;
 }
+
 
 .card-projeto {
   flex: 1;
@@ -274,21 +291,23 @@ nav .logo {
   display: flex;
   gap: 4px;
   background: #111;
-  padding: 20px;
-  min-height: 220px;
+  padding: 16px;
 }
 
 .projeto-imgs img {
-  flex: 1;
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  background: #333;
   border-radius: 4px;
+  object-fit: cover;  
+  width: 100%;
 }
 
-.projeto-imgs-2 img {
-  flex-basis: 50%;
+
+.projeto-imgs-retrato img {
+  aspect-ratio: 9 / 19;
+}
+
+
+.projeto-imgs-paisagem img {
+  aspect-ratio: 16 / 10;
 }
 
 .card-projeto-info {
@@ -354,8 +373,13 @@ nav .logo {
 
 .botoes2 {
   margin-top: 30px;
+  
 }
 
+.botoes2 a {
+    text-decoration: none;
+    color: black;
+}
 .botoes2 .projetos-btn {
   background: #fff;
   color: #000;
@@ -384,7 +408,6 @@ nav .logo {
 .ctt-info img {
   width: 20px;
   height: 20px;
-  filter: invert(1);
 }
 
 @media (max-width: 900px) {
