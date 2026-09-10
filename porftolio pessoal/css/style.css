@@ -94,7 +94,7 @@ nav .logo {
   height: 33px;
 }
 
-/* Botão hambúrguer — escondido no desktop */
+
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -483,9 +483,8 @@ nav .logo {
   flex-shrink: 0;
 }
 
-/* ===================== RESPONSIVO ===================== */
 
-/* Tablets grandes / notebooks pequenos */
+
 @media (max-width: 1100px) {
   .text1-info {
     font-size: 70px;
@@ -506,7 +505,7 @@ nav .logo {
   }
 }
 
-/* Tablets */
+
 @media (max-width: 900px) {
   .info-inicio,
   .info-sobre,
@@ -546,7 +545,7 @@ nav .logo {
     padding: 0 20px;
   }
 
-  /* Menu hambúrguer entra em cena */
+  
   .menu-toggle {
     display: flex;
   }
@@ -597,7 +596,7 @@ nav .logo {
   }
 }
 
-/* Celulares */
+
 @media (max-width: 560px) {
   .text1-info {
     font-size: 40px;
@@ -697,7 +696,7 @@ nav .logo {
   }
 }
 
-/* Celulares pequenos */
+
 @media (max-width: 380px) {
   .text1-info {
     font-size: 32px;
