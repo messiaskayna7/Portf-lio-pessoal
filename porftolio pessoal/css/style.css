@@ -211,7 +211,7 @@ nav .logo {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: 10px;
+  gap: 40px;
 }
 
 .coluna-texto {
@@ -260,10 +260,9 @@ nav .logo {
 .img-inicio img,
 .img-sobre img,
 .img-contato img {
-  width: 320px;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 12px;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
 }
 
 .sobre {
@@ -503,8 +502,7 @@ nav .logo {
   .img-inicio img,
   .img-sobre img,
   .img-contato img {
-    width: 260px;
-    height: 260px;
+    max-width: 300px;
   }
 }
 
@@ -529,8 +527,7 @@ nav .logo {
   .img-inicio img,
   .img-sobre img,
   .img-contato img {
-    width: 240px;
-    height: 240px;
+    max-width: 260px;
   }
 
   .text1-info {
@@ -633,8 +630,7 @@ nav .logo {
   .img-inicio img,
   .img-sobre img,
   .img-contato img {
-    width: 200px;
-    height: 200px;
+    max-width: 220px;
   }
 
   .texto-sobre {
