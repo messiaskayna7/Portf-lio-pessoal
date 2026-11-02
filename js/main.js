@@ -4,7 +4,7 @@
   const TEXTOS = window.TEXTOS;
   const PROJETOS = window.PROJETOS;
   let idioma = "pt";
-  try { if (localStorage.getItem("idioma") === "en") idioma = "en"; } catch (e) {  }
+  try { if (localStorage.getItem("idioma") === "en") idioma = "en"; } catch (e) {}
 
   const t = (chave) => (TEXTOS[idioma] && TEXTOS[idioma][chave]) || TEXTOS.pt[chave] || "";
 
@@ -25,7 +25,7 @@
 
   document.getElementById("idioma").addEventListener("click", () => {
     idioma = idioma === "pt" ? "en" : "pt";
-    try { localStorage.setItem("idioma", idioma); } catch (e) {  }
+    try { localStorage.setItem("idioma", idioma); } catch (e) {}
     aplicarIdioma();
   });
 
