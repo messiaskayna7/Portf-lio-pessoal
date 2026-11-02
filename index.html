@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Messias Kaynã | Front-end & UI/UX</title>
+  <meta name="description" content="Portfólio de Messias Kaynã: desenvolvedor Front-end, designer UI/UX e estudante de Ciência da Computação em Pernambuco.">
+  <meta name="theme-color" content="#1b1b1b">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Prévia ao compartilhar o link (WhatsApp, LinkedIn etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://portf-lio-pessoal-three.vercel.app/">
+  <meta property="og:title" content="Messias Kaynã | Desenvolvedor Front-end & UI/UX">
+  <meta property="og:description" content="Transformo ideias em experiências digitais modernas, funcionais e marcantes.">
+  <meta property="og:image" content="https://portf-lio-pessoal-three.vercel.app/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&family=Bebas+Neue&family=Inter:wght@400;600&family=Medula+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="carregando">
+
+  <!-- Tela de abertura -->
+  <div class="abertura" id="abertura" aria-hidden="true">
+    <div class="abertura-nome">
+      <span class="abertura-messias">MESSIAS</span>
+      <span class="abertura-kayna">KAYNÃ</span>
+    </div>
+  </div>
+
+  <!-- Cabeçalho fixo: muda de cor nas seções escuras -->
+  <header class="topo" id="topo">
+    <a class="logo" href="#inicio" data-i18n-attr="aria-label:aria.logo" aria-label="Voltar ao início">&lt;/&gt;</a>
+    <nav class="menu" data-i18n-attr="aria-label:aria.menu" aria-label="Navegação principal">
+      <a href="#inicio" data-i18n="nav.inicio">Inicio</a>
+      <a href="#sobre" data-i18n="nav.sobre">Sobre</a>
+      <a href="#projetos" data-i18n="nav.projetos">Projetos</a>
+      <a href="#contatos" data-i18n="nav.contatos">Contatos</a>
+    </nav>
+    <button class="idioma" id="idioma" type="button" data-i18n-attr="aria-label:aria.idioma" aria-label="Mudar idioma para inglês">
+      <span data-lang="pt">PT</span><span class="idioma-barra">/</span><span data-lang="en">EN</span>
+    </button>
+    <div class="redes">
+      <a href="https://www.linkedin.com/in/messias-kayna/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="assets/img/icon-linkedin.png" alt="">
+      </a>
+      <a href="https://github.com/messiaskayna7" target="_blank" rel="noopener" aria-label="GitHub">
+        <img src="assets/img/icon-github.png" alt="">
+      </a>
+      <a href="https://www.instagram.com/ogmessik7/" target="_blank" rel="noopener" aria-label="Instagram">
+        <img src="assets/img/icon-instagram.png" alt="">
+      </a>
+    </div>
+  </header>
+
+  <!-- Contador de páginas (canto inferior esquerdo) -->
+  <div class="contador" id="contador" aria-hidden="true">
+    <span class="contador-atual" id="contadorAtual">01</span>
+    <span class="contador-barra"><span class="contador-preenchimento" id="contadorBarra"></span></span>
+    <span class="contador-total">04</span>
+  </div>
+
+  <main id="paginas">
+
+    <!-- 01 · INÍCIO -->
+    <section class="pagina pagina-inicio" id="inicio" data-tema="claro">
+      <div class="fundo fundo-claro" aria-hidden="true"></div>
+      <div class="palco">
+        <div class="inicio-texto">
+          <h1 class="titulo-dev revelar" data-i18n="inicio.titulo">Desenvolvedor</h1>
+          <p class="subtitulo revelar"><span>Front-end</span><span class="barra">/</span><span class="cinza">UI-UX Designer</span></p>
+          <p class="inicio-descricao revelar" data-i18n="inicio.descricao">Transformo ideias em experiências digitais modernas, funcionais e marcantes. Desenvolvimento Front-end e UI/UX para criar interfaces que conectam, engajam e resolvem problemas reais.</p>
+          <div class="inicio-botoes revelar">
+            <a class="link-sublinhado" href="#sobre" data-i18n="inicio.saibaMais">Saiba mais</a>
+            <a class="botao botao-escuro" href="#projetos"><span data-i18n="inicio.projetos">Projetos</span> <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
+          </div>
+        </div>
+
+        <div class="hero-arte">
+          <img class="ha-messias" src="assets/img/messias.svg" alt="">
+          <img class="ha-circulo" src="assets/img/hero-circulo.svg" alt="">
+          <div class="ha-essia"><img src="assets/img/essia.svg" alt=""></div>
+          <div class="ha-foto"><img src="assets/img/hero-foto.png" alt="Messias Kaynã"></div>
+          <div class="ha-nome"><span>KAYNÃ</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 · SOBRE -->
+    <section class="pagina pagina-sobre" id="sobre" data-tema="claro">
+      <div class="fundo fundo-claro" aria-hidden="true"></div>
+      <div class="palco">
+        <div class="sobre-topo">
+          <h2 class="titulo-sobre revelar" data-i18n-html="sobre.titulo">Sobre<br>mim.</h2>
+          <div class="sobre-texto revelar">
+            <p data-i18n="sobre.p1">Estudante de Ciência da Computação, atualmente cursando Desenvolvimento Front-End.</p>
+            <p data-i18n="sobre.p2">Sou desenvolvedor Front-End e designer UI/UX apaixonado por transformar problemas em soluções digitais criativas e eficientes.</p>
+            <p data-i18n="sobre.p3">Atuo na criação de interfaces modernas, acessíveis e intuitivas, sempre pensando na melhor experiência do usuário e na performance.</p>
+            <a class="botao botao-escuro botao-cv" href="assets/curriculo-messias-kayna.pdf" download>
+              <span data-i18n="cv.baixar">Baixar currículo</span>
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+            </a>
+          </div>
+          <div class="sobre-foto revelar">
+            <div class="sobre-arco"></div>
+            <img src="assets/img/sobre-foto.png" data-i18n-attr="alt:alt.sobreFoto" alt="Foto de Messias Kaynã em preto e branco">
+          </div>
+        </div>
+
+        <h3 class="titulo-ferramentas revelar" data-i18n="sobre.ferramentas">Ferramentas</h3>
+        <div class="ferramentas revelar">
+          <ul class="ferramentas-trilha" id="ferramentasTrilha">
+            <li class="ferramenta"><img class="img-html" src="assets/img/tool-html.png" alt=""><span>HTML</span></li>
+            <li class="ferramenta"><img class="img-css" src="assets/img/tool-css.png" alt=""><span>CSS</span></li>
+            <li class="ferramenta"><img class="img-js" src="assets/img/tool-js.png" alt=""><span>JavaScript</span></li>
+            <li class="ferramenta"><img class="img-svg" src="assets/img/tool-python.svg" alt=""><span>Python</span></li>
+            <li class="ferramenta"><span class="tile-django"><img src="assets/img/tool-django.svg" alt=""></span><span>Django</span></li>
+            <li class="ferramenta"><img class="img-svg" src="assets/img/tool-sqlite.svg" alt=""><span data-i18n="sobre.banco">Banco de dados · SQL</span></li>
+            <li class="ferramenta"><img class="img-git" src="assets/img/tool-git.png" alt=""><span>Git</span></li>
+            <li class="ferramenta"><img class="img-github" src="assets/img/tool-github.png" alt=""><span>GitHub</span></li>
+            <li class="ferramenta"><img class="img-svg img-figma" src="assets/img/tool-figma.svg" alt=""><span>Figma</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 · PROJETOS -->
+    <section class="pagina pagina-projetos" id="projetos" data-tema="claro">
+      <div class="fundo fundo-projetos" aria-hidden="true"></div>
+      <div class="palco">
+        <div class="projetos" id="listaProjetos">
+          <article class="projeto revelar" data-projeto="julia" tabindex="0" role="button">
+            <div class="projeto-midia midia-dupla midia-julia">
+              <img src="assets/img/julia-desktop.jpg" alt="">
+              <img src="assets/img/julia-celular.jpg" alt="">
+              <span class="projeto-ver" data-i18n="projetos.ver">Ver detalhes</span>
+            </div>
+            <div class="projeto-corpo">
+              <h3>Lash Júlia Beatriz</h3>
+              <p data-i18n="projetos.julia.tipo">Site com agendamento online</p>
+              <ul class="tags"><li>JS</li><li>CSS</li><li>SQL</li></ul>
+            </div>
+          </article>
+
+          <article class="projeto revelar" data-projeto="academia" tabindex="0" role="button">
+            <div class="projeto-midia midia-dupla midia-academia">
+              <img src="assets/img/academia-desktop.jpg" alt="">
+              <img src="assets/img/academia-celular.jpg" alt="">
+              <span class="projeto-ver" data-i18n="projetos.ver">Ver detalhes</span>
+            </div>
+            <div class="projeto-corpo">
+              <h3 data-i18n="projetos.academia.titulo">Sistema de academia</h3>
+              <p data-i18n="projetos.academia.tipo">Python, Django e banco de dados</p>
+              <ul class="tags"><li>Python</li><li>Django</li><li>SQLite</li></ul>
+            </div>
+          </article>
+
+          <article class="projeto revelar" data-projeto="lipe" tabindex="0" role="button">
+            <div class="projeto-midia midia-lipe">
+              <img src="assets/img/lipe-1.png" alt="">
+              <img src="assets/img/lipe-2.png" alt="">
+              <img src="assets/img/lipe-3.png" alt="">
+              <span class="projeto-ver" data-i18n="projetos.ver">Ver detalhes</span>
+            </div>
+            <div class="projeto-corpo">
+              <h3>LIPE</h3>
+              <p data-i18n="projetos.startup">Projeto de uma startup</p>
+              <ul class="tags"><li>Figma</li></ul>
+            </div>
+          </article>
+
+          <article class="projeto revelar" data-projeto="mei" tabindex="0" role="button">
+            <div class="projeto-midia midia-mei">
+              <img src="assets/img/mei-tela.png" alt="">
+              <img src="assets/img/mei-financeiro.png" alt="">
+              <img src="assets/img/mei-mentorias.png" alt="">
+              <span class="projeto-ver" data-i18n="projetos.ver">Ver detalhes</span>
+            </div>
+            <div class="projeto-corpo">
+              <h3>Do zero ao MEI</h3>
+              <p data-i18n="projetos.startup">Projeto de uma startup</p>
+              <ul class="tags"><li>JS</li><li>HTML</li><li>CSS</li></ul>
+            </div>
+          </article>
+
+          <article class="projeto revelar" data-projeto="turma" tabindex="0" role="button">
+            <div class="projeto-midia midia-turma">
+              <img src="assets/img/turma-1.png" alt="">
+              <img src="assets/img/turma-2.png" alt="">
+              <span class="projeto-ver" data-i18n="projetos.ver">Ver detalhes</span>
+            </div>
+            <div class="projeto-corpo">
+              <h3 data-i18n="projetos.turma.titulo">Portfólio da turma</h3>
+              <p data-i18n="projetos.turma.tipo">Portfólio</p>
+              <ul class="tags"><li>JS</li><li>HTML</li><li>CSS</li></ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="projetos-controles revelar">
+          <button class="seta" id="projetosAnterior" type="button" data-i18n-attr="aria-label:aria.anterior" aria-label="Projeto anterior">
+            <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <span class="projetos-pos" id="projetosPos">1 / 5</span>
+          <button class="seta" id="projetosProximo" type="button" data-i18n-attr="aria-label:aria.proximo" aria-label="Próximo projeto">
+            <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · CONTATOS -->
+    <section class="pagina pagina-contatos" id="contatos" data-tema="escuro">
+      <div class="fundo fundo-escuro" aria-hidden="true"></div>
+      <div class="palco">
+        <div class="contato-texto">
+          <h2 class="titulo-contato revelar" data-i18n-html="contato.titulo">Vamos<br>conversar ?</h2>
+          <p class="contato-pergunta revelar" data-i18n="contato.pergunta">Tem algum projeto em mente ?</p>
+          <a class="botao botao-claro botao-whats revelar" href="https://wa.me/5581983991205?text=Ol%C3%A1%20Messias!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">
+            <span data-i18n="contato.whats">Enviar mensagem</span> <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+          </a>
+          <ul class="contato-lista revelar">
+            <li>
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+              <button class="link-texto" type="button" data-abrir="contato">messiaskayna7@gmail.com</button>
+            </li>
+            <li>
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="https://wa.me/5581983991205" target="_blank" rel="noopener">(81) 98399-1205</a>
+            </li>
+            <li>
+              <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="contato.local">Recife, PE - Brasil</span>
+            </li>
+          </ul>
+          <div class="contato-extras revelar">
+            <button class="link-sublinhado" type="button" data-abrir="contato" data-i18n="contato.email">Escrever e-mail</button>
+            <a class="link-sublinhado" href="assets/curriculo-messias-kayna.pdf" download data-i18n="cv.baixarCurto">Baixar CV</a>
+          </div>
+        </div>
+
+        <div class="contato-arte">
+          <img class="ca-listras" src="assets/img/contato-listras.svg" alt="">
+          <img class="ca-retrato" src="assets/img/contato-retrato.png" data-i18n-attr="alt:alt.ilustracao" alt="Ilustração de Messias Kaynã">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Janela: detalhes do projeto -->
+  <div class="modal" id="modalProjeto" hidden>
+    <div class="modal-fundo" data-fechar></div>
+    <div class="modal-caixa modal-projeto" role="dialog" aria-modal="true" aria-labelledby="mpTitulo">
+      <button class="modal-fechar" type="button" data-fechar data-i18n-attr="aria-label:aria.fechar" aria-label="Fechar">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="mp-galeria" id="mpGaleria"></div>
+      <div class="mp-texto">
+        <p class="mp-tipo" id="mpTipo"></p>
+        <h3 class="mp-titulo" id="mpTitulo"></h3>
+        <p class="mp-resumo" id="mpResumo"></p>
+        <h4 data-i18n="modal.fiz">O que eu fiz</h4>
+        <ul class="mp-lista" id="mpLista"></ul>
+        <h4 data-i18n="modal.tecnologias">Tecnologias</h4>
+        <ul class="tags mp-tags" id="mpTags"></ul>
+        <div class="mp-links" id="mpLinks"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Janela: formulário de contato -->
+  <div class="modal" id="modalContato" hidden>
+    <div class="modal-fundo" data-fechar></div>
+    <div class="modal-caixa modal-form" role="dialog" aria-modal="true" aria-labelledby="mcTitulo">
+      <button class="modal-fechar" type="button" data-fechar data-i18n-attr="aria-label:aria.fechar" aria-label="Fechar">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <h3 class="mp-titulo" id="mcTitulo" data-i18n="form.titulo">Escreva para mim</h3>
+      <p class="mc-sub" data-i18n="form.sub">A mensagem chega direto no meu e-mail.</p>
+      <form id="formContato" novalidate>
+        <label><span data-i18n="form.nome">Nome</span><input name="nome" type="text" autocomplete="name" required maxlength="80"></label>
+        <label><span data-i18n="form.email">Seu e-mail</span><input name="email" type="email" autocomplete="email" required maxlength="120"></label>
+        <label><span data-i18n="form.mensagem">Mensagem</span><textarea name="mensagem" rows="5" required maxlength="2000"></textarea></label>
+        <input type="text" name="_honey" class="pote" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="botao botao-escuro botao-enviar" type="submit"><span data-i18n="form.enviar">Enviar</span>
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>
+        </button>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
