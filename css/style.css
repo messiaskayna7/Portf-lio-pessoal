@@ -1,9 +1,3 @@
-/* =========================================================
-   Portfólio Messias Kaynã
-   O layout de computador segue o Figma (palco de 1440 x 900).
-   --u é "1 pixel do Figma", escalado para caber na tela.
-   ========================================================= */
-
 :root {
   --u: min(calc(100vw / 1440), calc(100vh / 900));
   --preto: #000;
@@ -22,8 +16,7 @@
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
-  scrollbar-width: none; /* o contador substitui a barra de rolagem */
-}
+  scrollbar-width: none;}
 html::-webkit-scrollbar { display: none; }
 
 body {
@@ -46,7 +39,6 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
   flex: none;
 }
 
-/* ---------- Páginas e palco ---------- */
 .pagina {
   position: relative;
   height: 100vh;
@@ -63,7 +55,6 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
   transform: translate(-50%, -50%);
 }
 
-/* ---------- Fundo com degradê pulsante ---------- */
 .fundo { position: absolute; inset: 0; pointer-events: none; }
 .fundo::before {
   content: "";
@@ -74,7 +65,6 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
   will-change: transform;
 }
 
-/* Elipse branca desfocada sobre fundo escuro (Início e Sobre) */
 .fundo-claro { background: var(--fundo-escuro); }
 .fundo-claro::before {
   left: 53.2%; top: 54.5%;
@@ -84,7 +74,6 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
     rgba(255,255,255,.14) 87%, rgba(255,255,255,0) 100%);
 }
 
-/* Elipse branca sobre fundo preto (Projetos) */
 .fundo-projetos { background: #000; }
 .fundo-projetos::before {
   left: 49.65%; top: 49.6%;
@@ -95,7 +84,6 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
   animation-delay: -2s;
 }
 
-/* Elipse preta sobre fundo branco (Contatos) */
 .fundo-escuro { background: #fff; }
 .fundo-escuro::before {
   left: 48.9%; top: 52.3%;
@@ -111,7 +99,6 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
   50%      { transform: translate(-50%, -50%) scale(.84); }
 }
 
-/* ---------- Cabeçalho fixo ---------- */
 .topo {
   position: fixed;
   z-index: 20;
@@ -165,7 +152,6 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 .topo.escuro { color: var(--branco); }
 .topo.escuro .redes img { filter: invert(1); }
 
-/* Botão PT / EN */
 .idioma {
   position: absolute;
   left: calc(845 * var(--u)); top: calc(56 * var(--u));
@@ -184,7 +170,6 @@ h1, h2, h3, p { margin: 0; font-weight: 400; }
 button { font: inherit; }
 :focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
 
-/* ---------- Contador 01 —— 04 ---------- */
 .contador {
   position: fixed;
   z-index: 20;
@@ -219,7 +204,6 @@ button { font: inherit; }
 .contador.escuro { color: var(--branco); }
 .contador.escuro .contador-barra { background: rgba(255, 255, 255, .25); }
 
-/* ---------- Botões ---------- */
 .botao {
   position: absolute;
   display: flex;
@@ -257,7 +241,6 @@ button { font: inherit; }
 .link-sublinhado:hover { letter-spacing: .04em; }
 .link-sublinhado { transition: letter-spacing .35s var(--suave); }
 
-/* ---------- Animação de entrada ---------- */
 .revelar {
   opacity: 0;
   translate: 0 calc(30 * var(--u));
@@ -269,9 +252,6 @@ button { font: inherit; }
     transform .35s var(--suave), box-shadow .35s var(--suave);
 }
 
-/* =========================================================
-   01 · INÍCIO
-   ========================================================= */
 .titulo-dev {
   position: absolute;
   left: calc(98 * var(--u)); top: calc(202 * var(--u));
@@ -311,7 +291,6 @@ button { font: inherit; }
   gap: calc(12 * var(--u));
 }
 
-/* Composição da foto (grupo de 678 x 794 no Figma) */
 .hero-arte {
   position: absolute;
   left: calc(750 * var(--u)); top: calc(78 * var(--u));
@@ -336,7 +315,6 @@ button { font: inherit; }
   transform-origin: 30% 80%;
   animation: balancar 9s ease-in-out infinite;
 }
-/* Letras do meio, giradas como no Figma (texto alinhado à esquerda na caixa) */
 .ha-essia img {
   width: 72.53%; height: auto;
   transform: rotate(11.82deg) translate(-8.29cqw, 3.98cqw);
@@ -376,9 +354,6 @@ button { font: inherit; }
 .hero-arte:hover .ha-foto img { transform: scale(1.05); }
 .hero-arte:hover .ha-circulo { animation-duration: 3s; }
 
-/* =========================================================
-   02 · SOBRE
-   ========================================================= */
 .titulo-sobre {
   position: absolute;
   left: calc(55 * var(--u)); top: calc(163 * var(--u));
@@ -446,11 +421,9 @@ button { font: inherit; }
   border-radius: calc(10 * var(--u));
   background: linear-gradient(to right, #fff 25.48%, #999);
   box-shadow: inset 0 calc(4 * var(--u)) calc(4 * var(--u)) rgba(0,0,0,.25);
-  /* bordas somem suavemente enquanto os cards passam */
   -webkit-mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
   mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
 }
-/* A lista vem duplicada pelo JS; andar metade dela fecha a volta sem emenda */
 .ferramentas-trilha {
   display: flex;
   gap: calc(22 * var(--u));
@@ -519,10 +492,6 @@ button { font: inherit; }
 .ferramenta:hover > span:last-child { opacity: 1; transform: translate(-50%, 0); }
 .ferramenta > span:last-child { white-space: nowrap; }
 
-/* =========================================================
-   03 · PROJETOS
-   ========================================================= */
-/* Carrossel: 3 cards visíveis no tamanho do Figma, o resto aparece pelas setas ou arrastando */
 .projetos {
   position: absolute;
   left: calc(23 * var(--u)); top: calc(183 * var(--u));
@@ -552,7 +521,6 @@ button { font: inherit; }
 .projeto:nth-child(3) { transition-delay: 0s, 0s, .24s, .24s; }
 .projeto:focus-visible { outline: 3px solid #000; outline-offset: 4px; }
 
-/* Selo "Ver detalhes" que aparece sobre as imagens */
 .projeto-ver {
   position: absolute;
   right: calc(14 * var(--u)); bottom: calc(14 * var(--u));
@@ -616,7 +584,6 @@ button { font: inherit; }
 .midia-turma img:nth-child(1) { width: calc(174 * var(--u)); height: calc(116 * var(--u)); }
 .midia-turma img:nth-child(2) { width: calc(184 * var(--u)); height: calc(113 * var(--u)); margin-top: calc(2 * var(--u)); }
 
-/* Computador + celular (Júlia e Academia) */
 .midia-dupla { padding: calc(52 * var(--u)) 0 0 calc(22 * var(--u)); }
 .midia-julia { background-image: linear-gradient(135deg, #000 30%, #d9d9d9 95%); }
 .midia-academia { background-image: linear-gradient(-45deg, #000 35%, #cfd8d4 95%); }
@@ -635,7 +602,6 @@ button { font: inherit; }
   box-shadow: 0 calc(8 * var(--u)) calc(20 * var(--u)) rgba(0,0,0,.45);
 }
 
-/* Telas sobem e descem em sequência */
 .projeto-midia img { animation: flutuar-leve 6s ease-in-out infinite; }
 .projeto-midia img:nth-child(2) { animation-delay: -2s; }
 .projeto-midia img:nth-child(3) { animation-delay: -4s; }
@@ -656,9 +622,6 @@ button { font: inherit; }
 }
 .tags li:hover { background: var(--preto); color: var(--branco); transform: translateY(calc(-3 * var(--u))); }
 
-/* =========================================================
-   04 · CONTATOS
-   ========================================================= */
 .pagina-contatos { color: var(--branco); }
 
 .titulo-contato {
@@ -727,16 +690,12 @@ button { font: inherit; }
   position: absolute;
   left: 15.15%; top: 13.42%;
   width: 66.16%; height: 72.55%;
-  clip-path: ellipse(50% 49.25% at 50% 49.25%); /* a imagem exportada vem com cantos brancos */
-  animation: flutuar 6s ease-in-out infinite;
+  clip-path: ellipse(50% 49.25% at 50% 49.25%);  animation: flutuar 6s ease-in-out infinite;
   transition: transform .7s var(--suave), filter .7s;
 }
 .contato-arte:hover .ca-retrato { transform: scale(1.05) rotate(-2deg); filter: drop-shadow(0 0 calc(30 * var(--u)) rgba(255,255,255,.35)); }
 .contato-arte:hover .ca-listras { animation-duration: 3s; }
 
-/* =========================================================
-   Janelas: detalhes do projeto e formulário
-   ========================================================= */
 html.modal-aberto { overflow: hidden; }
 .modal {
   position: fixed; inset: 0; z-index: 50;
@@ -746,7 +705,6 @@ html.modal-aberto { overflow: hidden; }
   transition: opacity .3s var(--suave);
 }
 .modal.visivel { opacity: 1; }
-/* Fechada, a janela some de verdade (senão fica invisível bloqueando os cliques) */
 .modal[hidden] { display: none; }
 .modal-fundo { position: absolute; inset: 0; background: rgba(10,10,10,.72); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
 .modal-caixa {
@@ -824,9 +782,6 @@ html.modal-aberto { overflow: hidden; }
 .form-status.ok { color: #1a7f37; }
 .form-status.erro { color: #b42318; }
 
-/* =========================================================
-   Tela de abertura
-   ========================================================= */
 body.carregando { overflow: hidden; }
 .abertura {
   position: fixed; inset: 0; z-index: 100;
@@ -842,7 +797,6 @@ body.carregando { overflow: hidden; }
   letter-spacing: .02em;
   clip-path: inset(0 100% 0 0);
 }
-/* A animação só começa quando a fonte do nome já carregou */
 .abertura.pronta .abertura-messias { animation: escrever 1s var(--suave) .1s forwards; }
 .abertura-kayna {
   font: 400 clamp(30px, 6vw, 80px) / 1.2 var(--fonte-nome);
@@ -857,7 +811,6 @@ body.carregando { overflow: hidden; }
 @keyframes escrever { to { clip-path: inset(0 0 0 0); } }
 @keyframes subir { to { opacity: 1; transform: none; } }
 
-/* ---------- Movimentos ---------- */
 @keyframes flutuar {
   0%, 100% { translate: 0 0; }
   50%      { translate: 0 calc(-14 * var(--u)); }
@@ -887,9 +840,6 @@ body.carregando { overflow: hidden; }
   to   { opacity: 1; scale: 1; }
 }
 
-/* =========================================================
-   Celular e tablet em pé: layout em coluna
-   ========================================================= */
 @media (max-width: 900px), (max-aspect-ratio: 4/5) {
   :root { --u: calc(100vw / 720); }
 
@@ -963,7 +913,6 @@ body.carregando { overflow: hidden; }
 
   .botao-cv { height: calc(60 * var(--u)); font-size: calc(32 * var(--u)); }
 
-  /* Projetos: deslize para o lado */
   .projetos { width: calc(100% + 80 * var(--u)); margin: 0 calc(-40 * var(--u)); padding: calc(20 * var(--u)) calc(40 * var(--u)) calc(30 * var(--u)); gap: calc(30 * var(--u)); scroll-padding: 0 calc(40 * var(--u)); }
   .projeto { width: calc(560 * var(--u)); }
   .projeto.revelar { opacity: 1; translate: none; }
@@ -1003,7 +952,6 @@ body.carregando { overflow: hidden; }
   .contato-arte { width: 100%; height: auto; aspect-ratio: 919 / 827; }
 }
 
-/* Quem prefere menos movimento */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }

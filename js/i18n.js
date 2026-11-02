@@ -1,6 +1,3 @@
-// Textos do site em português e inglês.
-// Para mudar um texto, edite aqui. A chave é a mesma usada no HTML (data-i18n="...").
-
 window.TEXTOS = {
   pt: {
     "meta.titulo": "Messias Kaynã | Front-end & UI/UX",
@@ -106,8 +103,6 @@ window.TEXTOS = {
   }
 };
 
-// Detalhes de cada projeto (janela "Ver detalhes").
-// Revise os textos: escrevi a partir das telas e do código de cada projeto.
 window.PROJETOS = {
   julia: {
     imagens: ["assets/img/julia-desktop.jpg", "assets/img/julia-celular.jpg"],

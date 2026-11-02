@@ -1,19 +1,10 @@
-// Portfólio Messias Kaynã
-// - Tela de abertura
-// - Idioma PT/EN (textos em js/i18n.js)
-// - Rolagem infinita: depois de Contatos, o site volta para o Início sem corte
-// - Contador 01–04 com barra que enche conforme a rolagem
-// - Ferramentas em carrossel contínuo, projetos em carrossel com setas
-// - Janela de detalhes dos projetos e formulário de contato
-
 (function () {
   const reduzirMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------------- Idioma ---------------- */
   const TEXTOS = window.TEXTOS;
   const PROJETOS = window.PROJETOS;
   let idioma = "pt";
-  try { if (localStorage.getItem("idioma") === "en") idioma = "en"; } catch (e) { /* sem armazenamento */ }
+  try { if (localStorage.getItem("idioma") === "en") idioma = "en"; } catch (e) {  }
 
   const t = (chave) => (TEXTOS[idioma] && TEXTOS[idioma][chave]) || TEXTOS.pt[chave] || "";
 
@@ -34,12 +25,10 @@
 
   document.getElementById("idioma").addEventListener("click", () => {
     idioma = idioma === "pt" ? "en" : "pt";
-    try { localStorage.setItem("idioma", idioma); } catch (e) { /* ignora */ }
+    try { localStorage.setItem("idioma", idioma); } catch (e) {  }
     aplicarIdioma();
   });
 
-  /* ---------------- Ferramentas: carrossel contínuo ---------------- */
-  // Duplica a lista para a animação dar a volta sem emenda.
   const trilha = document.getElementById("ferramentasTrilha");
   Array.from(trilha.children).forEach((item) => {
     const copia = item.cloneNode(true);
@@ -47,7 +36,6 @@
     trilha.appendChild(copia);
   });
 
-  /* ---------------- Páginas, rolagem infinita e contador ---------------- */
   const main = document.getElementById("paginas");
   const paginas = Array.from(main.querySelectorAll(".pagina"));
   const topo = document.getElementById("topo");
@@ -57,7 +45,6 @@
   const linksMenu = Array.from(document.querySelectorAll(".menu a"));
   const total = paginas.length;
 
-  // Cópia do Início no final: quando ela ocupa a tela, voltamos ao topo de verdade.
   const copia = paginas[0].cloneNode(true);
   copia.removeAttribute("id");
   copia.classList.add("copia-inicio");
@@ -88,9 +75,8 @@
     const meio = y + alturaTela / 2;
     let indice = 0;
     todas.forEach((p, i) => { if (p.offsetTop <= meio) indice = i; });
-    if (indice >= total) indice = 0; // a cópia conta como Início
+    if (indice >= total) indice = 0;
 
-    // Barra: 25% no Início até 100% em Contatos; depois esvazia enquanto volta ao Início.
     const topoContatos = paginas[total - 1].offsetTop;
     let fracao;
     if (y <= topoContatos) {
@@ -115,7 +101,6 @@
   window.addEventListener("scroll", aoRolar, { passive: true });
   window.addEventListener("resize", aoRolar);
 
-  /* ---------------- Projetos: carrossel ---------------- */
   const lista = document.getElementById("listaProjetos");
   const cards = Array.from(lista.querySelectorAll(".projeto"));
   const posicao = document.getElementById("projetosPos");
@@ -139,7 +124,6 @@
   lista.addEventListener("scroll", () => requestAnimationFrame(atualizarPosicao), { passive: true });
   window.addEventListener("resize", atualizarPosicao);
 
-  /* ---------------- Janelas (modais) ---------------- */
   let projetoAberto = null;
   let ultimoFoco = null;
 
@@ -195,7 +179,6 @@
     });
   });
 
-  /* ---------------- Formulário de contato ---------------- */
   const modalContato = document.getElementById("modalContato");
   const form = document.getElementById("formContato");
   const status = document.getElementById("formStatus");
@@ -221,7 +204,6 @@
     status.textContent = t("form.enviando");
     status.className = "form-status";
     try {
-      // FormSubmit entrega a mensagem no e-mail, sem precisar de servidor próprio.
       const resposta = await fetch("https://formsubmit.co/ajax/messiaskayna7@gmail.com", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
@@ -246,7 +228,6 @@
     }
   });
 
-  /* ---------------- Mouse: as imagens grandes acompanham ---------------- */
   if (window.matchMedia("(hover: hover) and (pointer: fine)").matches && !reduzirMovimento) {
     const artes = document.querySelectorAll(".hero-arte, .contato-arte");
     window.addEventListener("mousemove", (e) => {
@@ -259,7 +240,6 @@
     }, { passive: true });
   }
 
-  /* ---------------- Entrada dos elementos ---------------- */
   function iniciarRevelar() {
     const observador = new IntersectionObserver((entradas) => {
       entradas.forEach((ent) => ent.target.classList.toggle("visivel", ent.isIntersecting));
@@ -267,11 +247,9 @@
     document.querySelectorAll(".revelar").forEach((el) => observador.observe(el));
   }
 
-  /* ---------------- Tela de abertura ---------------- */
   const abertura = document.getElementById("abertura");
   let inicio = performance.now();
   let encerrada = false;
-  // Espera a fonte do nome (no máximo 1,2 s) para a animação não aparecer com a fonte errada.
   Promise.race([
     document.fonts ? document.fonts.load('1em "Medula One"') : Promise.resolve(),
     new Promise((r) => setTimeout(r, 1200))
@@ -289,7 +267,7 @@
     }, espera);
   }
   window.addEventListener("load", encerrarAbertura);
-  setTimeout(encerrarAbertura, 3500); // não segura o visitante se a internet estiver lenta
+  setTimeout(encerrarAbertura, 3500);
 
   aplicarIdioma();
   atualizar();
